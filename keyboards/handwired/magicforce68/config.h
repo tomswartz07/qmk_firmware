@@ -22,11 +22,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
+#define PRODUCT_ID      0xCAFE
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Hexwire
-#define PRODUCT         Magicforce 68
-#define DESCRIPTION     Handwired Magicforce 68
+#define MANUFACTURER    Tom Swartz
+#define PRODUCT         Magicforce68 QMK Keyboard
+#define DESCRIPTION     Handwired Magicforce 68 Keyboard QMK Firmware
 
 /* key matrix size */
 #define MATRIX_ROWS 5
