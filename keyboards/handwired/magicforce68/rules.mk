@@ -1,5 +1,7 @@
 # MCU name
-MCU = atmega32u4
+MCU = MK20DX256
+# Enter lower-power sleep mode when on the ChibiOS idle thread
+OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 
 # Bootloader selection
 #   Teensy       halfkay
@@ -9,7 +11,7 @@ MCU = atmega32u4
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
-BOOTLOADER = caterina
+BOOTLOADER = halfkay
 
 # Build Options
 #   change yes to no to disable
