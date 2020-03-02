@@ -18,7 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef CONFIG_H
 #define CONFIG_H
 
+/*
 #include "config_common.h"
+*/
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
@@ -42,8 +44,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { F0, F1, F4, F5, F6 }
-#define MATRIX_COL_PINS { B2, B0, D3, D2, D1, D0, D4, C6, D7, E6, B4, B5, B6, B7, D6 }
+#define MATRIX_ROW_PINS { B16, B17, D0, A12, A13 }
+#define MATRIX_COL_PINS { D7, D4, D2, D3, C3, C4, C6, C2, D1, B0, B1, B3, B2, D5, D6 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
