@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0xCAFE
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Tom Swartz
+#define MANUFACTURER    Tom Swartz Homemade
 #define PRODUCT         Magicforce68 QMK Keyboard
 #define DESCRIPTION     Handwired Magicforce 68 Keyboard QMK Firmware
 
@@ -44,8 +44,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { B16, B17, D0, A12, A13 }
-#define MATRIX_COL_PINS { D7, D4, D2, D3, C3, C4, C6, C2, D1, B0, B1, B3, B2, D5, D6 }
+#define MATRIX_ROW_PINS { B16, D4, C4, C7, D2 }
+/*#define MATRIX_COL_PINS { 00, 00, 00, 00, 00, 00, 00, D7, A12, D0, B17, A13, 00, 00, 00 }*/
+#define MATRIX_COL_PINS { B2, B3, B1, C5, B0, D1, C0, D7, A12, D0, B17, A13, D3, D2, C3 }
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
