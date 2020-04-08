@@ -17,7 +17,7 @@
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
-    _BASE,
+    _NP,
     _FN
 };
 
@@ -25,25 +25,24 @@ enum layer_names {
 enum custom_keycodes {
     QMKBEST = SAFE_RANGE,
     QMKURL,
-    DOUBLEZERO
+    KC_00
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /* Base */
-    [_BASE] = LAYOUT(
-        KC_BSPC,   KC_NLCK,    KC_PSLS, KC_PAST, KC_PMNS,
-        TG(_FN),   KC_P7,      KC_P8,   KC_P9,   KC_PPLS,
-        TG(_BASE), KC_P4,      KC_P5,   KC_P6,   KC_NO  ,
-        KC_PGUP,   KC_P1,      KC_P2,   KC_P3,   KC_PENT,
-        KC_PGDOWN, DOUBLEZERO, KC_P0,   KC_PDOT, KC_NO
+    [_NP] = LAYOUT(
+        KC_BSPC,   KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
+        KC_TAB,    KC_P7,   KC_P8,   KC_P9,   KC_NO,
+        TG(_FN),   KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
+        KC_PGUP,   KC_P1,   KC_P2,   KC_P3,   KC_NO,
+        KC_PGDOWN, KC_00,   KC_P0,   KC_PDOT, KC_PENT
     ),
     [_FN] = LAYOUT(
-        QMKBEST,   QMKURL,  _______, _______, _______,
-        RESET,     _______, _______, _______, _______,
-        _______,   _______, _______, _______, _______,
-        TG(_BASE), _______, _______, _______, _______,
-        _______,   _______, _______, _______, _______,
-    )
+        QMKBEST, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,
+        TG(_FN), _______, _______, _______, _______,
+        KC_U,    KC_B,    _______, _______, _______,
+        KC_D,    KC_F,    _______, _______, _______
+    ),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -64,7 +63,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 // when keycode QMKURL is released
             }
             break;
-        case DOUBLEZERO:
+        case KC_00:
             if (record->event.pressed) {
                 // when keycode DOUBLEZERO is pressed
                 SEND_STRING("00");
