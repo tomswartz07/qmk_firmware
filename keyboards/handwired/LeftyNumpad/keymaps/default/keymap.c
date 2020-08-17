@@ -17,8 +17,8 @@
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
-    _NP,
-    _FN
+    _FN,
+    _NP
 };
 
 // Defines the keycodes used by our macros in process_record_user
@@ -29,19 +29,19 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_NP] = LAYOUT(
-        KC_BSPC,   KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
-        KC_TAB,    KC_7,    KC_8,   KC_9,   KC_NO,
-        TG(_FN),   KC_4,    KC_5,   KC_6,   KC_PPLS,
-        KC_PGUP,   KC_1,    KC_2,   KC_3,   KC_NO,
-        KC_PGDOWN, KC_00,   KC_0,   KC_PDOT, KC_PENT
-    ),
     [_FN] = LAYOUT(
         KC_GRV,  KC_MPLY, KC_F13,  KC_MPRV, KC_MNXT,
         _______, KC_F14,  KC_F15,  _______, _______,
         TG(_FN), _______, _______, _______, _______,
         KC_U,    KC_B,    _______, _______, _______,
         KC_D,    KC_F,    _______, _______, _______
+    ),
+    [_NP] = LAYOUT(
+        KC_BSPC,   KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
+        KC_TAB,    KC_7,    KC_8,   KC_9,   KC_NO,
+        TG(_FN),   KC_4,    KC_5,   KC_6,   KC_PPLS,
+        KC_PGUP,   KC_1,    KC_2,   KC_3,   KC_NO,
+        KC_PGDOWN, KC_00,   KC_0,   KC_PDOT, KC_PENT
     ),
 };
 
